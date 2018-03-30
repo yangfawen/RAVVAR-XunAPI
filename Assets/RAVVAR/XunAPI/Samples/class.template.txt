@@ -1,0 +1,16 @@
+-- 用正式类名全局替换__class__
+if __class__ == nil then
+
+__class__={}
+
+function __class__:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+
+	return o
+end
+
+end
+
+return __class__

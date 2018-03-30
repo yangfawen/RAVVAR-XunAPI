@@ -1,0 +1,14 @@
+if GameObject==nil then
+	import('UnityEngine')
+end
+local createLuaObj = DarAR.CreateLuaClass
+findW = GameObjectEX.SearchChildW
+
+function main(root)
+	--获取资源引用C#组件及资源
+	local assets = root:GetComponent('AssetsRef')
+	local obj = createLuaObj(root,assets:Find('LUTTest').text)
+	obj:Init(assets)
+end
+
+return main

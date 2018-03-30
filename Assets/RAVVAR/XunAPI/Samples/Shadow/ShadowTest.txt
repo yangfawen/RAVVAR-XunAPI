@@ -1,0 +1,27 @@
+if ShadowTest == nil then
+
+ShadowTest={}
+
+function ShadowTest:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+	self.gameObject = container.gameObject
+	return o
+end
+
+function ShadowTest:Start()
+	if Shader.Find("FX/MatteShadow") == nil then
+		local arg = Hashtable()
+		arg:Add("functionName","toast");
+		arg:Add("info", '当前版本不支持阴影平面');
+		local bridge = Object.FindObjectOfType('UnityBridge')
+		bridge:NativeCommonCallback(arg)
+	end
+	local plane = findW(self.gameObject,'plane');
+	plane:AddComponent('ShadowPlane')
+end
+
+end
+
+return ShadowTest

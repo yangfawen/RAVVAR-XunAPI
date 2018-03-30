@@ -1,0 +1,889 @@
+fileFormatVersion: 2
+guid: fdd2a69b2d4fe3e488325ebb5dea95b2
+timeCreated: 1503034559
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 0.!joint_Center
+    100002: 1.joint_Torso
+    100004: 10.joint_LeftShoulder
+    100006: 100.joint_RightMiddle2
+    100008: 101.!joint_miginakayubi3nigi
+    100010: 102.joint_RightMiddle3
+    100012: 103.!joint_migikusuriyubi1nigi
+    100014: 104.!joint_migikusuriyubi1_
+    100016: 105.joint_RightRing1
+    100018: 106.!joint_migikusuriyubi2nigi
+    100020: 107.joint_RightRing2
+    100022: 108.!joint_migikusuriyubi3nigi
+    100024: 109.joint_RightRing3
+    100026: 11.joint_LeftArm
+    100028: 110.!joint_migikoyubi1nigi
+    100030: 111.!joint_migikoyubi1_
+    100032: 112.joint_RightPinky1
+    100034: 113.!joint_migikoyubi2nigi
+    100036: 114.joint_RightPinky2
+    100038: 115.!joint_migikoyubi3nigi
+    100040: 116.joint_RightPinky3
+    100042: 117.!joint_CenterTip
+    100044: 118.!joint_HipMasterTip
+    100046: 119.!joint_LeftSleeveTip
+    100048: 12.joint_LeftArmTwist
+    100050: 120.!joint_RightSleeveTip
+    100052: 121.!joint_LeftWristTip
+    100054: 122.!joint_RightWristTip
+    100056: 123.!joint_NecktieTip
+    100058: 124.!joint_WaistAccessoriesTip
+    100060: 125.!joint_LeftSkirtFrontTip
+    100062: 126.!joint_LeftSkirtBackTip
+    100064: 127.!joint_RightSkirtFrontTip
+    100066: 128.!joint_RightSkirtBackTip
+    100068: 129.!joint_LeftThumbTip
+    100070: 13.joint_LeftArmTwist1
+    100072: 130.!joint_LeftIndexTip
+    100074: 131.!joint_LeftMiddleTip
+    100076: 132.!joint_LeftRingTip
+    100078: 133.!joint_LeftPinkyTip
+    100080: 134.!joint_RightThumbTip
+    100082: 135.!joint_RightIndexTip
+    100084: 136.!joint_RightMiddleTip
+    100086: 137.!joint_RightRingTip
+    100088: 138.!joint_RightPinkyTip
+    100090: 139.joint_FrontHair1
+    100092: 14.joint_LeftArmTwist2
+    100094: 140.joint_FrontHair2
+    100096: 141.joint_FrontHair3
+    100098: 142.joint_LeftHair1
+    100100: 143.joint_LeftHair2
+    100102: 144.joint_LeftHair3
+    100104: 145.joint_LeftHair4
+    100106: 146.joint_LeftHair5
+    100108: 147.joint_LeftHair6
+    100110: 148.joint_LeftHair7
+    100112: 149.joint_RightHair1
+    100114: 15.joint_LeftElbow
+    100116: 150.joint_RightHair2
+    100118: 151.joint_RightHair3
+    100120: 152.joint_RightHair4
+    100122: 153.joint_RightHair5
+    100124: 154.joint_RightHair6
+    100126: 155.joint_RightHair7
+    100128: 156.!joint_HeadTip
+    100130: 157.!joint_LeftEyeTip
+    100132: 158.!joint_RightEyeTip
+    100134: 159.!joint_FrontHair1Tip
+    100136: 16.!joint_LeftHandTwist
+    100138: 160.!joint_FrontHair2Tip
+    100140: 161.!joint_FrontHair3Tip
+    100142: 162.!joint_LeftHairTip
+    100144: 163.!joint_RightHairTip
+    100146: 164.!IK_LeftHair
+    100148: 165.!IK_RightHair
+    100150: 166.!IK_LeftHairTip
+    100152: 167.!IK_RightHairTip
+    100154: 168.!joint_EyesTip
+    100156: 169.!IK_LeftHipTip
+    100158: 17.joint_LeftSleeve
+    100160: 170.!IK_RightHipTip
+    100162: 171.!IK_LeftToeTip
+    100164: 172.!IK_RightToeTip
+    100166: 173.!joint_LeftArmTwistTip
+    100168: 174.!joint_RightArmTwistTip
+    100170: 175.!joint_LeftHandTwistTip
+    100172: 176.!joint_RightHandTwistTip
+    100174: 177.!joint__u
+    100176: 178.!joint_migitsunerisaki
+    100178: 179.!joint_migishinshuku1
+    100180: 18.joint_LeftWrist
+    100182: 180.!joint_migishinshuku2
+    100184: 181.!joint_migishinshuku2b
+    100186: 182.joint_migihoo
+    100188: 183.!joint_hidaritsunerimoto
+    100190: 184.!joint_hidarishinshuku1
+    100192: 185.!joint_hidarishinshuku2
+    100194: 186.!joint_hidarishinshuku2b
+    100196: 187.joint_hidarihoo
+    100198: 188.!Root
+    100200: 189.!joint_LeftThumb0M
+    100202: 19.!joint_hidaritegu^
+    100204: 190.!joint_RightThumb0M
+    100206: 2.joint_Neck
+    100208: 20.!joint_hidarite_^
+    100210: 21.!joint_hidarite__
+    100212: 22.!joint_hidaritenigisaki
+    100214: 23.joint_RightShoulder
+    100216: 24.joint_RightArm
+    100218: 25.joint_RightArmTwist
+    100220: 26.joint_RightArmTwist1
+    100222: 27.joint_RightArmTwist2
+    100224: 28.joint_RightElbow
+    100226: 29.!joint_RightHandTwist
+    100228: 3.joint_Head
+    100230: 30.joint_RightSleeve
+    100232: 31.joint_RightWrist
+    100234: 32.!joint_migitegu^
+    100236: 33.!joint_migite_^
+    100238: 34.!joint_migite__
+    100240: 35.!joint_migitenigisaki
+    100242: 36.joint_HipMaster
+    100244: 37.joint_WaistAccessories
+    100246: 38.joint_LeftHip
+    100248: 39.joint_LeftKnee
+    100250: 4.joint_LeftEye
+    100252: 40.joint_LeftFoot
+    100254: 41.joint_RightHip
+    100256: 42.joint_RightKnee
+    100258: 43.joint_RightFoot
+    100260: 44.joint_LeftSkirtFront
+    100262: 45.joint_LeftSkirtBack
+    100264: 46.joint_RightSkirtFront
+    100266: 47.joint_RightSkirtBack
+    100268: 48.!joint_LeftToe
+    100270: 49.!joint_RightToe
+    100272: 5.joint_RightEye
+    100274: 50.!IK_Necktie
+    100276: 51.!IK_LeftHip
+    100278: 52.!IK_LeftToe
+    100280: 53.!IK_RightHip
+    100282: 54.!IK_RightToe
+    100284: 55.!joint_hidarioyayubi1_
+    100286: 56.joint_LeftThumb1
+    100288: 57.joint_LeftThumb2
+    100290: 58.!joint_hidarijinyubi1nigi
+    100292: 59.!joint_hidarijinyubi1_
+    100294: 6.!joint_Eyes
+    100296: 60.joint_LeftIndex1
+    100298: 61.!joint_hidarijinyubi2nigi
+    100300: 62.joint_LeftIndex2
+    100302: 63.!joint_hidarijinyubi3nigi
+    100304: 64.joint_LeftIndex3
+    100306: 65.!joint_hidarinakayubi1nigi
+    100308: 66.!joint_hidarinakayubi1_
+    100310: 67.joint_LeftMiddle1
+    100312: 68.!joint_hidarinakayubi2nigi
+    100314: 69.joint_LeftMiddle2
+    100316: 7.joint_Necktie1
+    100318: 70.!joint_hidarinakayubi3nigi
+    100320: 71.joint_LeftMiddle3
+    100322: 72.!joint_hidarikusuriyubi1nigi
+    100324: 73.!joint_hidarikusuriyubi1_
+    100326: 74.joint_LeftRing1
+    100328: 75.!joint_hidarikusuriyubi2nigi
+    100330: 76.joint_LeftRing2
+    100332: 77.!joint_hidarikusuriyubi3nigi
+    100334: 78.joint_LeftRing3
+    100336: 79.!joint_hidarikoyubi1nigi
+    100338: 8.joint_Necktie2
+    100340: 80.!joint_hidarikoyubi1_
+    100342: 81.joint_LeftPinky1
+    100344: 82.!joint_hidarikoyubi2nigi
+    100346: 83.joint_LeftPinky2
+    100348: 84.!joint_hidarikoyubi3nigi
+    100350: 85.joint_LeftPinky3
+    100352: 86.!joint_migioyayubi1_
+    100354: 87.joint_RightThumb1
+    100356: 88.joint_RightThumb2
+    100358: 89.!joint_migijinyubi1nigi
+    100360: 9.joint_Necktie3
+    100362: 90.!joint_migijinyubi1_
+    100364: 91.joint_RightIndex1
+    100366: 92.!joint_migijinyubi2nigi
+    100368: 93.joint_RightIndex2
+    100370: 94.!joint_migijinyubi3nigi
+    100372: 95.joint_RightIndex3
+    100374: 96.!joint_miginakayubi1nigi
+    100376: 97.!joint_miginakayubi1_
+    100378: 98.joint_RightMiddle1
+    100380: 99.!joint_miginakayubi2nigi
+    100382: //RootNode
+    100384: U_Char
+    100386: U_Char_0
+    100388: U_Char_1
+    400000: 0.!joint_Center
+    400002: 1.joint_Torso
+    400004: 10.joint_LeftShoulder
+    400006: 100.joint_RightMiddle2
+    400008: 101.!joint_miginakayubi3nigi
+    400010: 102.joint_RightMiddle3
+    400012: 103.!joint_migikusuriyubi1nigi
+    400014: 104.!joint_migikusuriyubi1_
+    400016: 105.joint_RightRing1
+    400018: 106.!joint_migikusuriyubi2nigi
+    400020: 107.joint_RightRing2
+    400022: 108.!joint_migikusuriyubi3nigi
+    400024: 109.joint_RightRing3
+    400026: 11.joint_LeftArm
+    400028: 110.!joint_migikoyubi1nigi
+    400030: 111.!joint_migikoyubi1_
+    400032: 112.joint_RightPinky1
+    400034: 113.!joint_migikoyubi2nigi
+    400036: 114.joint_RightPinky2
+    400038: 115.!joint_migikoyubi3nigi
+    400040: 116.joint_RightPinky3
+    400042: 117.!joint_CenterTip
+    400044: 118.!joint_HipMasterTip
+    400046: 119.!joint_LeftSleeveTip
+    400048: 12.joint_LeftArmTwist
+    400050: 120.!joint_RightSleeveTip
+    400052: 121.!joint_LeftWristTip
+    400054: 122.!joint_RightWristTip
+    400056: 123.!joint_NecktieTip
+    400058: 124.!joint_WaistAccessoriesTip
+    400060: 125.!joint_LeftSkirtFrontTip
+    400062: 126.!joint_LeftSkirtBackTip
+    400064: 127.!joint_RightSkirtFrontTip
+    400066: 128.!joint_RightSkirtBackTip
+    400068: 129.!joint_LeftThumbTip
+    400070: 13.joint_LeftArmTwist1
+    400072: 130.!joint_LeftIndexTip
+    400074: 131.!joint_LeftMiddleTip
+    400076: 132.!joint_LeftRingTip
+    400078: 133.!joint_LeftPinkyTip
+    400080: 134.!joint_RightThumbTip
+    400082: 135.!joint_RightIndexTip
+    400084: 136.!joint_RightMiddleTip
+    400086: 137.!joint_RightRingTip
+    400088: 138.!joint_RightPinkyTip
+    400090: 139.joint_FrontHair1
+    400092: 14.joint_LeftArmTwist2
+    400094: 140.joint_FrontHair2
+    400096: 141.joint_FrontHair3
+    400098: 142.joint_LeftHair1
+    400100: 143.joint_LeftHair2
+    400102: 144.joint_LeftHair3
+    400104: 145.joint_LeftHair4
+    400106: 146.joint_LeftHair5
+    400108: 147.joint_LeftHair6
+    400110: 148.joint_LeftHair7
+    400112: 149.joint_RightHair1
+    400114: 15.joint_LeftElbow
+    400116: 150.joint_RightHair2
+    400118: 151.joint_RightHair3
+    400120: 152.joint_RightHair4
+    400122: 153.joint_RightHair5
+    400124: 154.joint_RightHair6
+    400126: 155.joint_RightHair7
+    400128: 156.!joint_HeadTip
+    400130: 157.!joint_LeftEyeTip
+    400132: 158.!joint_RightEyeTip
+    400134: 159.!joint_FrontHair1Tip
+    400136: 16.!joint_LeftHandTwist
+    400138: 160.!joint_FrontHair2Tip
+    400140: 161.!joint_FrontHair3Tip
+    400142: 162.!joint_LeftHairTip
+    400144: 163.!joint_RightHairTip
+    400146: 164.!IK_LeftHair
+    400148: 165.!IK_RightHair
+    400150: 166.!IK_LeftHairTip
+    400152: 167.!IK_RightHairTip
+    400154: 168.!joint_EyesTip
+    400156: 169.!IK_LeftHipTip
+    400158: 17.joint_LeftSleeve
+    400160: 170.!IK_RightHipTip
+    400162: 171.!IK_LeftToeTip
+    400164: 172.!IK_RightToeTip
+    400166: 173.!joint_LeftArmTwistTip
+    400168: 174.!joint_RightArmTwistTip
+    400170: 175.!joint_LeftHandTwistTip
+    400172: 176.!joint_RightHandTwistTip
+    400174: 177.!joint__u
+    400176: 178.!joint_migitsunerisaki
+    400178: 179.!joint_migishinshuku1
+    400180: 18.joint_LeftWrist
+    400182: 180.!joint_migishinshuku2
+    400184: 181.!joint_migishinshuku2b
+    400186: 182.joint_migihoo
+    400188: 183.!joint_hidaritsunerimoto
+    400190: 184.!joint_hidarishinshuku1
+    400192: 185.!joint_hidarishinshuku2
+    400194: 186.!joint_hidarishinshuku2b
+    400196: 187.joint_hidarihoo
+    400198: 188.!Root
+    400200: 189.!joint_LeftThumb0M
+    400202: 19.!joint_hidaritegu^
+    400204: 190.!joint_RightThumb0M
+    400206: 2.joint_Neck
+    400208: 20.!joint_hidarite_^
+    400210: 21.!joint_hidarite__
+    400212: 22.!joint_hidaritenigisaki
+    400214: 23.joint_RightShoulder
+    400216: 24.joint_RightArm
+    400218: 25.joint_RightArmTwist
+    400220: 26.joint_RightArmTwist1
+    400222: 27.joint_RightArmTwist2
+    400224: 28.joint_RightElbow
+    400226: 29.!joint_RightHandTwist
+    400228: 3.joint_Head
+    400230: 30.joint_RightSleeve
+    400232: 31.joint_RightWrist
+    400234: 32.!joint_migitegu^
+    400236: 33.!joint_migite_^
+    400238: 34.!joint_migite__
+    400240: 35.!joint_migitenigisaki
+    400242: 36.joint_HipMaster
+    400244: 37.joint_WaistAccessories
+    400246: 38.joint_LeftHip
+    400248: 39.joint_LeftKnee
+    400250: 4.joint_LeftEye
+    400252: 40.joint_LeftFoot
+    400254: 41.joint_RightHip
+    400256: 42.joint_RightKnee
+    400258: 43.joint_RightFoot
+    400260: 44.joint_LeftSkirtFront
+    400262: 45.joint_LeftSkirtBack
+    400264: 46.joint_RightSkirtFront
+    400266: 47.joint_RightSkirtBack
+    400268: 48.!joint_LeftToe
+    400270: 49.!joint_RightToe
+    400272: 5.joint_RightEye
+    400274: 50.!IK_Necktie
+    400276: 51.!IK_LeftHip
+    400278: 52.!IK_LeftToe
+    400280: 53.!IK_RightHip
+    400282: 54.!IK_RightToe
+    400284: 55.!joint_hidarioyayubi1_
+    400286: 56.joint_LeftThumb1
+    400288: 57.joint_LeftThumb2
+    400290: 58.!joint_hidarijinyubi1nigi
+    400292: 59.!joint_hidarijinyubi1_
+    400294: 6.!joint_Eyes
+    400296: 60.joint_LeftIndex1
+    400298: 61.!joint_hidarijinyubi2nigi
+    400300: 62.joint_LeftIndex2
+    400302: 63.!joint_hidarijinyubi3nigi
+    400304: 64.joint_LeftIndex3
+    400306: 65.!joint_hidarinakayubi1nigi
+    400308: 66.!joint_hidarinakayubi1_
+    400310: 67.joint_LeftMiddle1
+    400312: 68.!joint_hidarinakayubi2nigi
+    400314: 69.joint_LeftMiddle2
+    400316: 7.joint_Necktie1
+    400318: 70.!joint_hidarinakayubi3nigi
+    400320: 71.joint_LeftMiddle3
+    400322: 72.!joint_hidarikusuriyubi1nigi
+    400324: 73.!joint_hidarikusuriyubi1_
+    400326: 74.joint_LeftRing1
+    400328: 75.!joint_hidarikusuriyubi2nigi
+    400330: 76.joint_LeftRing2
+    400332: 77.!joint_hidarikusuriyubi3nigi
+    400334: 78.joint_LeftRing3
+    400336: 79.!joint_hidarikoyubi1nigi
+    400338: 8.joint_Necktie2
+    400340: 80.!joint_hidarikoyubi1_
+    400342: 81.joint_LeftPinky1
+    400344: 82.!joint_hidarikoyubi2nigi
+    400346: 83.joint_LeftPinky2
+    400348: 84.!joint_hidarikoyubi3nigi
+    400350: 85.joint_LeftPinky3
+    400352: 86.!joint_migioyayubi1_
+    400354: 87.joint_RightThumb1
+    400356: 88.joint_RightThumb2
+    400358: 89.!joint_migijinyubi1nigi
+    400360: 9.joint_Necktie3
+    400362: 90.!joint_migijinyubi1_
+    400364: 91.joint_RightIndex1
+    400366: 92.!joint_migijinyubi2nigi
+    400368: 93.joint_RightIndex2
+    400370: 94.!joint_migijinyubi3nigi
+    400372: 95.joint_RightIndex3
+    400374: 96.!joint_miginakayubi1nigi
+    400376: 97.!joint_miginakayubi1_
+    400378: 98.joint_RightMiddle1
+    400380: 99.!joint_miginakayubi2nigi
+    400382: //RootNode
+    400384: U_Char
+    400386: U_Char_0
+    400388: U_Char_1
+    4300000: U_Char_0
+    4300002: U_Char_1
+    7400000: GokuRakuJoudo
+    9500000: //RootNode
+    13700000: U_Char_0
+    13700002: U_Char_1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: GokuRakuJoudo
+      takeName: GokuRakuJoudo_vmd
+      firstFrame: 0
+      lastFrame: 6542
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: 188.!Root
+        weight: 1
+      - path: 188.!Root/0.!joint_Center
+        weight: 1
+      - path: 188.!Root/0.!joint_Center/117.!joint_CenterTip
+        weight: 1
+      - path: 188.!Root/0.!joint_Center/164.!IK_LeftHair
+        weight: 1
+      - path: 188.!Root/0.!joint_Center/164.!IK_LeftHair/166.!IK_LeftHairTip
+        weight: 1
+      - path: 188.!Root/0.!joint_Center/165.!IK_RightHair
+        weight: 1
+      - path: 188.!Root/0.!joint_Center/165.!IK_RightHair/167.!IK_RightHairTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/4.joint_LeftEye
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/4.joint_LeftEye/157.!joint_LeftEyeTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/5.joint_RightEye
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/5.joint_RightEye/158.!joint_RightEyeTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/6.!joint_Eyes
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/6.!joint_Eyes/168.!joint_EyesTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/139.joint_FrontHair1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/139.joint_FrontHair1/159.!joint_FrontHair1Tip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/140.joint_FrontHair2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/140.joint_FrontHair2/160.!joint_FrontHair2Tip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/141.joint_FrontHair3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/141.joint_FrontHair3/161.!joint_FrontHair3Tip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3/145.joint_LeftHair4
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3/145.joint_LeftHair4/146.joint_LeftHair5
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3/145.joint_LeftHair4/146.joint_LeftHair5/147.joint_LeftHair6
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3/145.joint_LeftHair4/146.joint_LeftHair5/147.joint_LeftHair6/148.joint_LeftHair7
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/142.joint_LeftHair1/143.joint_LeftHair2/144.joint_LeftHair3/145.joint_LeftHair4/146.joint_LeftHair5/147.joint_LeftHair6/148.joint_LeftHair7/162.!joint_LeftHairTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3/152.joint_RightHair4
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3/152.joint_RightHair4/153.joint_RightHair5
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3/152.joint_RightHair4/153.joint_RightHair5/154.joint_RightHair6
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3/152.joint_RightHair4/153.joint_RightHair5/154.joint_RightHair6/155.joint_RightHair7
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/149.joint_RightHair1/150.joint_RightHair2/151.joint_RightHair3/152.joint_RightHair4/153.joint_RightHair5/154.joint_RightHair6/155.joint_RightHair7/163.!joint_RightHairTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/156.!joint_HeadTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u/178.!joint_migitsunerisaki
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u/179.!joint_migishinshuku1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u/179.!joint_migishinshuku1/180.!joint_migishinshuku2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u/179.!joint_migishinshuku1/180.!joint_migishinshuku2/181.!joint_migishinshuku2b
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/177.!joint__u/179.!joint_migishinshuku1/180.!joint_migishinshuku2/181.!joint_migishinshuku2b/182.joint_migihoo
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/183.!joint_hidaritsunerimoto
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/183.!joint_hidaritsunerimoto/184.!joint_hidarishinshuku1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/183.!joint_hidaritsunerimoto/184.!joint_hidarishinshuku1/185.!joint_hidarishinshuku2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/183.!joint_hidaritsunerimoto/184.!joint_hidarishinshuku1/185.!joint_hidarishinshuku2/186.!joint_hidarishinshuku2b
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/2.joint_Neck/3.joint_Head/183.!joint_hidaritsunerimoto/184.!joint_hidarishinshuku1/185.!joint_hidarishinshuku2/186.!joint_hidarishinshuku2b/187.joint_hidarihoo
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/7.joint_Necktie1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/7.joint_Necktie1/8.joint_Necktie2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/7.joint_Necktie1/8.joint_Necktie2/9.joint_Necktie3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/7.joint_Necktie1/8.joint_Necktie2/9.joint_Necktie3/123.!joint_NecktieTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/12.joint_LeftArmTwist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/12.joint_LeftArmTwist/173.!joint_LeftArmTwistTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/13.joint_LeftArmTwist1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/14.joint_LeftArmTwist2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/16.!joint_LeftHandTwist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/16.!joint_LeftHandTwist/175.!joint_LeftHandTwistTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/17.joint_LeftSleeve
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/17.joint_LeftSleeve/119.!joint_LeftSleeveTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/19.!joint_hidaritegu^
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/19.!joint_hidaritegu^/22.!joint_hidaritenigisaki
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/20.!joint_hidarite_^
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/20.!joint_hidarite_^/21.!joint_hidarite__
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/55.!joint_hidarioyayubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/58.!joint_hidarijinyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/58.!joint_hidarijinyubi1nigi/59.!joint_hidarijinyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1/61.!joint_hidarijinyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1/62.joint_LeftIndex2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1/62.joint_LeftIndex2/63.!joint_hidarijinyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1/62.joint_LeftIndex2/64.joint_LeftIndex3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/60.joint_LeftIndex1/62.joint_LeftIndex2/64.joint_LeftIndex3/130.!joint_LeftIndexTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/65.!joint_hidarinakayubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/65.!joint_hidarinakayubi1nigi/66.!joint_hidarinakayubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1/68.!joint_hidarinakayubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1/69.joint_LeftMiddle2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1/69.joint_LeftMiddle2/70.!joint_hidarinakayubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1/69.joint_LeftMiddle2/71.joint_LeftMiddle3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/67.joint_LeftMiddle1/69.joint_LeftMiddle2/71.joint_LeftMiddle3/131.!joint_LeftMiddleTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/72.!joint_hidarikusuriyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/72.!joint_hidarikusuriyubi1nigi/73.!joint_hidarikusuriyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1/75.!joint_hidarikusuriyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1/76.joint_LeftRing2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1/76.joint_LeftRing2/77.!joint_hidarikusuriyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1/76.joint_LeftRing2/78.joint_LeftRing3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/74.joint_LeftRing1/76.joint_LeftRing2/78.joint_LeftRing3/132.!joint_LeftRingTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/79.!joint_hidarikoyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/79.!joint_hidarikoyubi1nigi/80.!joint_hidarikoyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1/82.!joint_hidarikoyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1/83.joint_LeftPinky2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1/83.joint_LeftPinky2/84.!joint_hidarikoyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1/83.joint_LeftPinky2/85.joint_LeftPinky3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/81.joint_LeftPinky1/83.joint_LeftPinky2/85.joint_LeftPinky3/133.!joint_LeftPinkyTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/121.!joint_LeftWristTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/189.!joint_LeftThumb0M
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/189.!joint_LeftThumb0M/56.joint_LeftThumb1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/189.!joint_LeftThumb0M/56.joint_LeftThumb1/57.joint_LeftThumb2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/10.joint_LeftShoulder/11.joint_LeftArm/15.joint_LeftElbow/18.joint_LeftWrist/189.!joint_LeftThumb0M/56.joint_LeftThumb1/57.joint_LeftThumb2/129.!joint_LeftThumbTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/25.joint_RightArmTwist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/25.joint_RightArmTwist/174.!joint_RightArmTwistTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/26.joint_RightArmTwist1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/27.joint_RightArmTwist2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/29.!joint_RightHandTwist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/29.!joint_RightHandTwist/176.!joint_RightHandTwistTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/30.joint_RightSleeve
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/30.joint_RightSleeve/120.!joint_RightSleeveTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/32.!joint_migitegu^
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/32.!joint_migitegu^/35.!joint_migitenigisaki
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/33.!joint_migite_^
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/33.!joint_migite_^/34.!joint_migite__
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/86.!joint_migioyayubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/89.!joint_migijinyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/89.!joint_migijinyubi1nigi/90.!joint_migijinyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1/92.!joint_migijinyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1/93.joint_RightIndex2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1/93.joint_RightIndex2/94.!joint_migijinyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1/93.joint_RightIndex2/95.joint_RightIndex3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/91.joint_RightIndex1/93.joint_RightIndex2/95.joint_RightIndex3/135.!joint_RightIndexTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/96.!joint_miginakayubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/96.!joint_miginakayubi1nigi/97.!joint_miginakayubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1/99.!joint_miginakayubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1/100.joint_RightMiddle2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1/100.joint_RightMiddle2/101.!joint_miginakayubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1/100.joint_RightMiddle2/102.joint_RightMiddle3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/98.joint_RightMiddle1/100.joint_RightMiddle2/102.joint_RightMiddle3/136.!joint_RightMiddleTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/103.!joint_migikusuriyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/103.!joint_migikusuriyubi1nigi/104.!joint_migikusuriyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1/106.!joint_migikusuriyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1/107.joint_RightRing2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1/107.joint_RightRing2/108.!joint_migikusuriyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1/107.joint_RightRing2/109.joint_RightRing3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/105.joint_RightRing1/107.joint_RightRing2/109.joint_RightRing3/137.!joint_RightRingTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/110.!joint_migikoyubi1nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/110.!joint_migikoyubi1nigi/111.!joint_migikoyubi1_
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1/113.!joint_migikoyubi2nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1/114.joint_RightPinky2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1/114.joint_RightPinky2/115.!joint_migikoyubi3nigi
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1/114.joint_RightPinky2/116.joint_RightPinky3
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/112.joint_RightPinky1/114.joint_RightPinky2/116.joint_RightPinky3/138.!joint_RightPinkyTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/122.!joint_RightWristTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/190.!joint_RightThumb0M
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/190.!joint_RightThumb0M/87.joint_RightThumb1
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/190.!joint_RightThumb0M/87.joint_RightThumb1/88.joint_RightThumb2
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/23.joint_RightShoulder/24.joint_RightArm/28.joint_RightElbow/31.joint_RightWrist/190.!joint_RightThumb0M/87.joint_RightThumb1/88.joint_RightThumb2/134.!joint_RightThumbTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/1.joint_Torso/50.!IK_Necktie
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/37.joint_WaistAccessories
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/37.joint_WaistAccessories/124.!joint_WaistAccessoriesTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/38.joint_LeftHip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/38.joint_LeftHip/39.joint_LeftKnee
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/38.joint_LeftHip/39.joint_LeftKnee/40.joint_LeftFoot
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/38.joint_LeftHip/39.joint_LeftKnee/40.joint_LeftFoot/48.!joint_LeftToe
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/41.joint_RightHip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/41.joint_RightHip/42.joint_RightKnee
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/41.joint_RightHip/42.joint_RightKnee/43.joint_RightFoot
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/41.joint_RightHip/42.joint_RightKnee/43.joint_RightFoot/49.!joint_RightToe
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/44.joint_LeftSkirtFront
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/44.joint_LeftSkirtFront/125.!joint_LeftSkirtFrontTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/45.joint_LeftSkirtBack
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/45.joint_LeftSkirtBack/126.!joint_LeftSkirtBackTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/46.joint_RightSkirtFront
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/46.joint_RightSkirtFront/127.!joint_RightSkirtFrontTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/47.joint_RightSkirtBack
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/47.joint_RightSkirtBack/128.!joint_RightSkirtBackTip
+        weight: 1
+      - path: 188.!Root/36.joint_HipMaster/118.!joint_HipMasterTip
+        weight: 1
+      - path: 188.!Root/51.!IK_LeftHip
+        weight: 1
+      - path: 188.!Root/51.!IK_LeftHip/52.!IK_LeftToe
+        weight: 1
+      - path: 188.!Root/51.!IK_LeftHip/52.!IK_LeftToe/171.!IK_LeftToeTip
+        weight: 1
+      - path: 188.!Root/51.!IK_LeftHip/169.!IK_LeftHipTip
+        weight: 1
+      - path: 188.!Root/53.!IK_RightHip
+        weight: 1
+      - path: 188.!Root/53.!IK_RightHip/54.!IK_RightToe
+        weight: 1
+      - path: 188.!Root/53.!IK_RightHip/54.!IK_RightToe/172.!IK_RightToeTip
+        weight: 1
+      - path: 188.!Root/53.!IK_RightHip/170.!IK_RightHipTip
+        weight: 1
+      - path: U_Char
+        weight: 1
+      - path: U_Char/U_Char_0
+        weight: 1
+      - path: U_Char/U_Char_1
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

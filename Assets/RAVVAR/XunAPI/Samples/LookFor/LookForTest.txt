@@ -1,0 +1,24 @@
+if LookForTest == nil then
+
+LookForTest={}
+
+function LookForTest:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+	self.gameObject = container.gameObject
+	return o
+end
+
+function LookForTest:Init(arg)
+	self.assets = arg
+end
+
+function LookForTest:Start()
+	local Class_LookForTip = Slua.GetClass('LookForTip')
+	Class_LookForTip.AddTo(self.gameObject,Camera.main,self.assets:Find('tip'))
+end
+
+end
+
+return LookForTest

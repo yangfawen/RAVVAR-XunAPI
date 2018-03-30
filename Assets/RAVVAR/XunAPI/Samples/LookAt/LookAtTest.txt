@@ -1,0 +1,32 @@
+if LookAtTest == nil then
+
+LookAtTest={}
+
+function LookAtTest:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+	self.gameObject = container.gameObject
+	return o
+end
+
+function LookAtTest:Start()
+	local Class_ObjLookAt = Slua.GetClass('ObjLookAt')
+	local aim = Camera.main.gameObject
+	Class_ObjLookAt.AddTo(self.gameObject,aim)
+end
+
+function LookAtTest:OnEnable()
+	local Class_ObjLookAt = Slua.GetClass('ObjLookAt')
+	local aim = Camera.main.gameObject
+	Class_ObjLookAt.AddTo(self.gameObject,aim)
+end
+
+function LookAtTest:OnDisable()
+	local Class_ObjLookAt = Slua.GetClass('ObjLookAt')
+	Class_ObjLookAt.RemoveLookState(self.gameObject)
+end
+
+end
+
+return LookAtTest

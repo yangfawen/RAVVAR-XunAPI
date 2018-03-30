@@ -1,0 +1,28 @@
+if LUTTest == nil then
+
+LUTTest={}
+
+function LUTTest:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+
+	return o
+end
+
+function LUTTest:Init(assets)
+	self.assets = assets
+end
+
+function LUTTest:Start()
+	self.Class_LUT = Slua.GetClass('LUT')
+	self.Class_LUT.Add(Camera.main,self.assets:Find('lut0'))
+end
+
+function LUTTest:OnDestroy()
+	self.Class_LUT.Remove(Camera.main)
+end
+
+end
+
+return LUTTest

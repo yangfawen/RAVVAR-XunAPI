@@ -1,0 +1,24 @@
+if GestureTest == nil then
+
+GestureTest={}
+
+function GestureTest:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+	self.gameObject = container.gameObject
+	return o
+end
+
+function GestureTest:Start()
+	-- 构造一个手势设置命令并执行
+	local cmd = Slua.CreateClass('SetGestureCommand')
+	cmd.enableMove = true
+	cmd.enableRotate = true
+	cmd.enableScale = true
+	cmd:Execute(findW(self.gameObject,'Miku'))
+end
+
+end
+
+return GestureTest

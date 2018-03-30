@@ -1,0 +1,26 @@
+-- 全局光控制
+if GlobalLightControl == nil then
+
+GlobalLightControl={}
+
+function GlobalLightControl:new(container)
+	local o = {}
+	setmetatable(o,self)
+	self.__index = self
+
+	return o
+end
+
+function GlobalLightControl:Start()
+	local Class_LightMgr = Slua.GetClass('LightMgr')
+	self.lightMgr = Class_LightMgr.TryGetInstance()
+	self.lightMgr:SetIntensity(0)
+end
+
+function GlobalLightControl:OnDestroy()
+	self.lightMgr:SetIntensity(1)
+end
+
+end
+
+return GlobalLightControl
