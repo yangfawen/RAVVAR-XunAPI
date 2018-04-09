@@ -75,7 +75,7 @@ https://mp.weixin.qq.com/s/jfka1xcbKnugRGeNIV8kwA
 
 第三步：选择具体的LUT文件来对原图调色；
 
-![](Doc/XunAPI10.png) 
+![](Doc/XunAPI11.png) 
 
 【Shadow】
 实时阴影示例，将阴影显示在现实环境中，增强AR的显示效果
