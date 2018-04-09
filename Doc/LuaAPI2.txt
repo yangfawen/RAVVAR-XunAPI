@@ -1,0 +1,277 @@
+--ui接口
+do
+	DarUI = {}
+	--设置UI是否可见
+	local function SetUIEnable(enable)
+		local unityBridge = UnityEngine.Object.FindObjectOfType('UnityBridge')
+		unityBridge:NativeSetUIVisiable(enable)
+	end
+
+	DarUI.SetUIEnable = SetUIEnable  --设置UI是否显示
+end
+
+--AR接口
+do
+	DarAR = {}
+	local DarCreatorAR = Slua.GetClass('DarCreatorAR')
+	-- 设置内置灯光是否可用
+	local function SetLightEnable(enable)
+		local intensity = 1
+		if not enable then
+			intensity = 0
+		end
+		DarAR.SetLightIntensity(intensity)
+	end
+
+	--	设置灯光的强度
+	--	@param 		percent 		默认强度的多少倍，一般取值0到1比较好
+	local function SetLightIntensity(percent)
+		local LightMgr = Slua.GetClass('LightMgr')
+		local mgr = LightMgr.TryGetInstance()
+		if not Slua.IsNull(mgr) then
+			mgr:SetIntensity(percent)
+		end
+	end
+	-- 把原生UI上的中断按钮设置为退出AR
+	local function SetInterruptAsClose(enable)
+		local unityBridge = UnityEngine.Object.FindObjectOfType('UnityBridge')
+		unityBridge.SetInterruptAsClose = enable;
+	end
+	-- 中断AR识别
+	local function InterruptAR()
+		local unityBridge = UnityEngine.Object.FindObjectOfType('UnityBridge')
+		unityBridge:InterruptAR()
+	end
+	-- 关闭项目
+	local function CloseProject()
+		local unityBridge = UnityEngine.Object.FindObjectOfType('UnityBridge')
+		unityBridge:CloseProject()
+	end
+	--截屏
+	local function CaptureScreen(callback)
+		local appMain = UnityEngine.GameObject.Find("AppMain")
+        local cam = UnityEngine.Camera.main
+        if not appMain == nil then
+            cam = appMain:GetComponent(Camera)
+        end
+		GetCameraTex.Attach(cam,callback)
+	end
+	-- 获取识别图名
+	local function GetTrackerName(gameObject)
+		local t = gameObject.transform
+		while(t.parent~=nil and t.parent.gameObject.name~='SceneRoot')do
+			t = t.parent
+		end
+		if(t.parent~=nil and t.parent.gameObject.name=='SceneRoot')then
+			return t.gameObject.name
+		else
+			print(gameObject:ToString()..'找不到识别图名字')
+			return nil
+		end
+	end
+	local function GetARObjRoot()
+		return DarCreatorAR.Instance:GetSceneMgr():GetSceneRoot()
+	end
+	local function GetTrackerProxy(gameObject)
+		local t = gameObject.transform
+		while(t.parent~=nil and t.parent.gameObject.name~='SceneRoot')do
+			t = t.parent
+		end
+		if(t.parent~=nil and t.parent.gameObject.name=='SceneRoot')then
+			return t.gameObject
+		else
+			print(gameObject:ToString()..'找不到识别图')
+			return nil
+		end
+	end
+	--创建一个视频对象，返回gameObject和控制脚本
+	local function CreateVidoeObject(filePath,b_alpha)
+		local videoPlayerName = 'easyMovieTexture/videoPlayer'
+		local typeName = 'VideoPlayer'
+		if	b_alpha then
+			videoPlayerName = 'easyMovieTexture/alphaVideoPlayer'
+			typeName = 'AlphaVideoPlayer'
+		end
+		local videoObjRes = Resources.Load(videoPlayerName)
+		local videoObj = Object.Instantiate(videoObjRes)
+		local handle = videoObj:GetComponentInChildren(typeName)
+		handle:SetFilePath(filePath)
+		--默认放置到ARObjRoot下
+		videoObj.transform:SetParent(DarAR.GetARObjRoot().transform,false)
+		return videoObj,handle
+	end
+	--从一个TextAsset形式的视频创建视频对象，返回gameObject和控制脚本
+	local function CreateVidoeObjectFromTextAsset(textAsset,b_alpha)
+		local fileName = os.date('%Y%m%d-%H%M%S') .. '.mp4'
+		local filePath = DarFileMgr.SaveFile(fileName,textAsset.bytes)
+		return CreateVidoeObject(filePath,b_alpha)
+	end
+	--创建一个容器并运行lua类代码,返回实例对象
+	local function CreateLuaClass(gameObject,luaStr)
+		local c = gameObject:AddComponent('LuaMonoContainer')
+		c.LuaStr = luaStr
+		c:Init()
+		return c.ClassInst
+	end
+	--	包装一个符合规范的lua类并创建mono实例，可用于一个lua类多处使用的问题
+	--	@param 		gameObject 		附着的场景对象
+	-- 	@param 		luaClassName 	要包装的lua类的名字，该lua类需要已经存在
+	-- 	@return		classInst 		生成的lua对象
+	local function WrapLuaClass(gameObject,luaClassName)
+		local c = gameObject:AddComponent('LuaMonoContainer')
+		c.ClassName = luaClassName
+		c:Init()
+		return c.ClassInst
+	end
+	--获取一个gameObject上的lua实例
+	local function GetLuaClassInstance(gameObject,className)
+		local c = gameObject:GetComponent('LuaMonoContainer')
+		if	Slua.IsNull(c) then
+			c = gameObject:GetComponent('LuaMonoBehaviour')
+		end
+		if	Slua.IsNull(c) then
+			c = gameObject:GetComponent('LuaBehaviourFix')
+		end
+		if	Slua.IsNull(c) then
+			c = gameObject:GetComponent('LuaBehaviour')
+		end
+		if	Slua.IsNull(c) then
+			return nil
+		else
+			return c.ClassInst
+		end
+	end
+	--给自身注册一个丢失识别进入自定义模式的触发
+	local function RegTrigger_IntoCustomWhenLost(gameObject)
+		if	gameObject.transform.parent == nil then
+			print('该对象不是根节点')
+			return false,'该对象不是根节点'
+		else
+			local p = gameObject.transform
+			local cmdHdl = nil
+			cmdHdl = p.gameObject:GetComponent('CommandHandler')
+			while cmdHdl == nil and p.parent~=nil do
+				p = p.parent
+				cmdHdl = p.gameObject:GetComponent('CommandHandler')
+			end
+			if	cmdHdl == nil then
+				print('找不到命令调度组件')
+				return false,'找不到命令调度组件'
+			end
+			local trackerName = DarAR.GetTrackerName(gameObject)
+			local cmd_intoCustom = Slua.CreateClass('AddToLuaCustomCommand')
+			cmdHdl:AddCommand(DarMsg.msg_ARLost..trackerName,cmd_intoCustom)
+			cmdHdl:RegMsg()
+			return true
+		end
+	end
+
+	DarAR.CaptureScreen = CaptureScreen  --截取屏幕
+	DarAR.CloseProject = CloseProject --关闭AR
+	DarAR.CreateLuaClass = CreateLuaClass --创建一个容器并运行lua类代码,返回实例对象
+	DarAR.CreateVidoeObject = CreateVidoeObject --创建一个视频对象，返回gameObject和控制脚本
+	DarAR.CreateVidoeObjectFromTextAsset = CreateVidoeObjectFromTextAsset --从一个TextAsset形式的视频创建视频对象，返回gameObject和控制脚本
+	
+	DarAR.GetARObjRoot = GetARObjRoot  --获取AR对象根节点
+	DarAR.GetLuaClassInstance = GetLuaClassInstance --获取一个gameObject上的lua实例
+	DarAR.GetTrackerName = GetTrackerName  --获取识别图名字
+	DarAR.GetTrackerProxy = GetTrackerProxy  --获取识别图代理对象
+	DarAR.GTable = DarAR.GTable or {}  --AR全局表
+
+	DarAR.InterruptAR = InterruptAR  --中断AR功能
+
+	DarAR.RegTrigger_IntoCustomWhenLost = RegTrigger_IntoCustomWhenLost --给自身注册一个丢失识别进入自定义模式的触发，这样在丢失识别时，不会出特效和UI
+
+	DarAR.SetLightEnable = SetLightEnable  --设置Unity全局灯光是否启用
+	DarAR.SetLightIntensity = SetLightIntensity  -- 设置灯光强度
+	DarAR.SetInterruptAsClose = SetInterruptAsClose  --设置中断AR的功能是否实际执行关闭AR
+
+	DarAR.WrapLuaClass = WrapLuaClass	--包装一个符合规范的lua类并创建mono实例，可用于一个lua类多处使用的问题
+end
+--消息注册相关
+--直接使用C#导出类，LuaMsgListener，具体定义在工程中看
+do
+	DarMsg = {}
+	DarMsg.msg_ARFound = 'ARFound'
+	DarMsg.msg_ARLost = 'ARLost'
+	DarMsg.msg_ARModeChange = 'ARModeChange'
+	DarMsg.msg_ARClose = 'ARClose'
+	DarMsg.msg_loadingBegin = 'loadingBegin'
+	local function AddListener(gameObject,msg,callback)
+		if	Slua.IsNull(gameObject) or msg == nil then
+			print('注册消息必须提供一个非空gameObject以添加组件,一个msg以关注消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:AddMsgListener(msg,callback)
+		end
+	end
+	local function RemoveListener(gameObject,msg,callback)
+		if	Slua.IsNull(gameObject) or msg == nil then
+			print('移除消息必须提供一个非空gameObject以添加组件,一个msg以移除消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:RemoveMsgListener(msg,callback)
+		end
+	end
+	local function AddFoundListener(gameObject,trackerName,callback)
+		if	Slua.IsNull(gameObject) or trackerName == nil then
+			print('注册消息必须提供一个非空gameObject以添加组件,一个识别图名以关注消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:AddMsgListener(DarMsg.msg_ARFound..trackerName,callback)
+		end
+	end
+	local function AddLostListener(gameObject,trackerName,callback)
+		if	Slua.IsNull(gameObject) or trackerName == nil then
+			print('注册消息必须提供一个非空gameObject以添加组件,一个识别图名以关注消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:AddMsgListener(DarMsg.msg_ARLost..trackerName,callback)
+		end
+	end
+	local function RemoveFoundListener(gameObject,trackerName,callback)
+		if	Slua.IsNull(gameObject) or trackerName == nil then
+			print('移除消息必须提供一个非空gameObject以添加组件,一个识别图名以移除消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:RemoveMsgListener(DarMsg.msg_ARFound..trackerName,callback)
+		end
+	end
+	local function RemoveLostListener(gameObject,trackerName,callback)
+		if	Slua.IsNull(gameObject) or trackerName == nil then
+			print('移除消息必须提供一个非空gameObject以添加组件,一个识别图名以移除消息')
+		else
+			local listener = LuaMsgListener.AttachMsgListener(gameObject)
+			listener:RemoveMsgListener(DarMsg.msg_ARLost..trackerName,callback)
+		end
+	end
+
+	DarMsg.AddFoundListener = AddFoundListener
+	DarMsg.AddListener = AddListener
+	DarMsg.AddLostListener = AddLostListener
+	
+	DarMsg.RemoveFoundListener = RemoveFoundListener
+	DarMsg.RemoveListener = RemoveListener
+	DarMsg.RemoveLostListener = RemoveLostListener
+end
+--文件管理
+do
+	DarFileMgr = {}
+	local DarCacheMgr = Slua.GetClass('DarCacheMgr')
+	local PluginsMgr = Slua.GetClass('PluginsMgr')
+	local function GetARFSM()
+		local objName = 'PluginsMgr/ARProjectLoaderFSM'
+		local obj = GameObject.Find(objName)
+		return obj:GetComponent('ARProjectLoaderFSM')
+	end
+	--保存文件到当前项目的缓存目录中，提供文件名和bytes
+	local function SaveFile(fileName,data)
+		local fsm = GetARFSM()
+		local projectUId = fsm.uniqueId
+		local filePath = DarCacheMgr.root .. '/' .. projectUId .. '/' .. fileName
+		DarCacheMgr.PureWrite(filePath,data,false)
+		return filePath
+	end
+
+	DarFileMgr.SaveFile = SaveFile  --保存文件到当前项目的缓存目录中
+end
