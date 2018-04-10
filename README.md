@@ -9,6 +9,8 @@ XunAPI Unity Plugin结构：
 
 使用XunAPI开发场景时，若开发的场景太大或有BUG，皆有可能导致RAVVAR APP的崩溃或造成其他AR场景错乱，此时请从设备中将APP关闭，然后重新开启即可。
 
+Unity版本：5.5.2
+
 使用过程中如果遇到遇到任何问题可直接联系：wendell.yang@ravvar.cn
 
 # 具体步骤
